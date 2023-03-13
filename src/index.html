@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Генератор сертифікатів</title>
+    <link rel="website icon" type="png" href="img/logo.png" />
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/spacelab/bootstrap.min.css" rel="stylesheet" integrity="sha384-sZG5VVk41YqhJjYXgJFoRVd3d2AdDgy4oyIytQJMGx/Mizz1N+5bgKQBSCGfKQnP" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link href="/examples/vendors/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">Fungos</h1>
+      <p class="about-site">Веб-застосунок призначений для зручного створення, завантаження або друку сертифікатів.</p>
+    </header>
+    <div id="containerdiv">
+      <div class="row">
+        <div class="col-md-6 mb-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title text-white">Введіть свої дані</h2>
+              <div class="form-group row">
+                <label for="title" class="col-form-label">Назва заходу:</label>
+                <input type="text" id="title" class="form-control" />
+
+                <label for="duration" class="col-form-label">Тривалість:</label>
+                <input type="number" id="duration" class="form-control" />
+
+                <label for="surnameTeacher" class="col-form-label"
+                  >Ініцали викладача:</label
+                >
+                <input type="text" id="surnameTeacher" class="form-control" />
+
+                <label for="surnameStudent" class="col-form-label"
+                  >Ініціали учня:</label
+                >
+                <input type="text" id="surnameStudent" class="form-control" />
+              </div>
+              <div class="card-footer">
+                <button id="create" class="btn btn-block">Додати</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="choose-image">
+          Slider here
+      </div>
+    </div>
+    </div>   
+    <div id="container-preview">
+      <div class="certif-prev">Certificate preview</div>
+      <div class="button-container">
+        <button id="print" class="button-1">Друк</button>
+        <button id="export" class="button-2">Експорт в PDF</button>
+      </div>
+    </div>
+    <footer class="py-5 bg-dark">
+        <p class="m-0 text-center text-white">Copyright &copy; Fungos 2023</p>
+        <div class="container">
+            <img src="img/email.jpg" alt="email-adress">
+            <a class="email" href="mailto:anurevakaterina@gmail.com">anurevakaterina@gmail.com</a>
+            <a class="email" href="mailto:valeriakawai@gmail.com">valeriakawai@gmail.com</a>
+            <img src="img/phone.png" alt="phone-numbers">
+            <a class="phone" href="tel:+380688121097">+380-68-812-10-97</a>
+            <a class="phone" href="tel:+380504097206">+380-50-409-72-06</a>
+        </div>
+    </footer>
+  </body>
+</html>
