@@ -207,3 +207,24 @@ header {
   color: #ffffff;
 }
 
+.content {
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.slick-slide .image {
+  padding: 10px;
+}
+
+.slick-slide img {
+  border: 5px solid #fff;
+  display: block;
+  width: 100%;
+}
+
+.slick-slide img.slick-loading {
+  border: 0;
+}
