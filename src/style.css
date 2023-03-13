@@ -25,9 +25,10 @@ header {
   font-weight: 500;
   color: #000000;
   font-family: "Roboto", sans-serif;
-  font-size: 18px; 
-} 
-.logo, 
+  font-size: 18px;
+}
+
+.logo,
 .about-site {
   display: inline-block;
 }
@@ -48,8 +49,8 @@ header {
 .card-footer,
 .row{
   border: none;
-  
 }
+
 .card{
   border: none;
   border-radius: 30px;
@@ -60,6 +61,7 @@ header {
   background-color: #436C89;
   border-radius: 30px;
 }
+
 .btn-success {
   color: #fff;
   background-color: #00417C;
@@ -79,6 +81,7 @@ header {
   color: white;
   padding: 5px 10px 0 10px;
 }
+
 .card-title{
   color: #FFF;
 }
@@ -95,7 +98,6 @@ header {
   border: 1px solid #000;
   float: right;
 }
-
 
 #container-preview{
   text-align: center;
@@ -120,9 +122,8 @@ header {
   height: 45%;
   left: 30%;
   top: 0.05%;
-  background: #D9D9D9; /* задаємо ширину блоку */ 
+  background: #D9D9D9; /* задаємо ширину блоку */
   margin: 0 auto; /* відступи зверху та знизу - 0, зліва та справа - авто */
-  
 }
 
 .button-container {
