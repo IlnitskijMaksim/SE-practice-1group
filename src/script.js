@@ -28,14 +28,6 @@ $(".single-item").slick({
       return false;
     }
 
-    if (isNaN(duration)) {
-      alert("Тривалість має бути числом.");
-      return false;
-    } else if (duration <= 0) {
-      alert("Тривалість має бути додатним числом");
-      return false;
-    }
-
     const regex = /^[a-zA-Zа-яА-ЯІіЇїЄєҐґ'.\s,;-]+$/;
     if (!regex.test(surnameTeacher) || !regex.test(surnameStudent)) {
       alert("Поля вводу прізвища та ініціалів можуть містити лише літери, пробіли, апостроф і деякі розділові знаки.");
