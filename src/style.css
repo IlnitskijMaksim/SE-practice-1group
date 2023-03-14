@@ -6,13 +6,14 @@ body {
 header {
   width: 100%;
   display:flex ;
+  background-color: #201D1D;
 }
 
 .logo {
   padding: 5px 10px 0 10px;
   text-align: left;
   font-weight: 500;
-  color: #000000;
+  color: #fff;
   font-family: 'Island Moments', cursive;
   font-size: 64px;
 }
@@ -21,7 +22,7 @@ header {
   padding: 30px 40px 0 40px;
   text-align: left;
   font-weight: 500;
-  color: #000000;
+  color: #fff;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
@@ -204,4 +205,9 @@ header {
 
 .slick-slide img.slick-loading {
   border: 0;
+}
+
+.selected-image img{
+  max-width: 100%;
+  padding: 5px 10px 0 10px;
 }
