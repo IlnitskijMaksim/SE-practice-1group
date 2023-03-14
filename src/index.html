@@ -58,32 +58,32 @@
             <div class="slider single-item">
               <div>
                 <div class="image">
-                  <img src="img/template1.png" />
+                  <img src="img/template1.png" data-src="img/template1.png"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template2.png" />
+                  <img src="img/template2.png" data-src="img/template2.png"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template3.png" />
+                  <img src="img/template3.png" data-src="img/template3.png"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template4.png" />
+                  <img src="img/template4.png" data-src="img/template4.png"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template5.png" />
+                  <img src="img/template5.png" data-src="img/template5.png"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template6.png" />
+                  <img src="img/template6.png" data-src="img/template6.png"/>
                 </div>
               </div>
             </div>
@@ -93,7 +93,7 @@
     </div>
     <div id="container-preview">
       <h2 class="card-title text-white">Готовий сертифікат</h2>
-      <div class="certif-prev">Certificate preview</div>
+      <div class="selected-image"></div>
       <div class="button-container">
         <button id="print" class="button-1">Друк</button>
         <button id="export" class="button-2">Експорт в PDF</button>
@@ -110,50 +110,6 @@
         <a class="phone" href="tel:+380504097206">+380-50-409-72-06</a>
       </div>
     </footer>
-    <script>
-      $(".single-item").slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      });
-
-      function validateForm() {
-        const title = document.getElementById("title").value.trim();
-        const duration = document.getElementById("duration").value.trim();
-        const surnameTeacher = document.getElementById("surname-teacher").value.trim();
-        const surnameStudent = document.getElementById("surname-student").value.trim();
-
-        if (title === "" || duration === "" || surnameTeacher === "" || surnameStudent === "") {
-          alert("Будь ласка, заповніть всі поля");
-          return false;
-        }
-
-        if (isNaN(duration)) {
-          alert("Тривалість має бути числом.");
-          return false;
-        } else if (duration <= 0) {
-          alert("Тривалість має бути додатним числом");
-          return false;
-        }
-
-        const regex = /^[a-zA-Zа-яА-ЯІіЇїЄєҐґ'.\s,;-]+$/;
-        if (!regex.test(surnameTeacher) || !regex.test(surnameStudent)) {
-          alert("Поля вводу прізвища та ініціалів можуть містити лише літери, пробіли, апостроф і деякі розділові знаки.");
-          return false;
-        }
-
-        return true;
-      }
-
-      const createButton = document.getElementById("create");
-      createButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (validateForm()) {
-          document.getElementById("form").submit();
-        }
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
