@@ -102,13 +102,12 @@ header {
   height: auto;
 }
 
-
 .button-container {
   display: flex;
   justify-content: center;
 }
 
-.button-1 {
+.button{
   border: none;
   color: #000;
   padding: 16px 32px;
@@ -124,65 +123,8 @@ header {
   border-radius: 10px;
 }
 
-.button-2 {
-  background-color: #2196F3;
-  border: none; 
-  color: #000;
-  padding: 16px 32px;
-  text-align: center; 
-  text-decoration: none; 
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px; 
-  cursor: pointer; 
-  background: #FFFFFF;
-  border-radius: 10px;
-}
-
 .bg-dark {
   background-color: #201D1D !important;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.container img {
-  max-width: 100%;
-  padding: 5px 10px 0 10px;
-}
-
-.container a{
-  flex-direction: column;
-}
-
-.email {
-  display: block;
-  margin: 10px 0;
-  color: #fff; 
-  font-size: 16px; 
-  text-decoration: none; 
-}
-
-.email:hover {
-  color: #ffffff;
-}
-
-.phone {
-  display: block; 
-  margin: 10px 0; 
-  color: #fff; 
-  font-size: 16px; 
-  text-decoration: none; 
-  flex-direction: row;
-}
-
-.phone:hover {
-  color: #ffffff;
 }
 
 .content {
@@ -212,7 +154,6 @@ header {
   padding: 5px 10px 0 10px;
 }
 
-
 .contact-info {
   display: flex;
   flex-wrap: wrap;
@@ -240,8 +181,4 @@ header {
 
 .email a:hover, .phone a:hover {
   color: #fff;
-}
-
-.m-0 {
-  margin-top: 10px;
 }
