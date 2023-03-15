@@ -44,3 +44,22 @@ $(".single-item").slick({
       document.getElementById("form").submit();
     }
   });
+
+ /* Print
+  $(document).ready(function () {
+    // rest of the code
+  
+    $("#print").click(function () {
+      // modify this line to only print the selected-image div
+      var printContents = $(".selected-image").html(); 
+  
+      var originalContents = document.body.innerHTML;
+  
+      document.body.innerHTML = printContents;
+  
+      window.print();
+  
+      document.body.innerHTML = originalContents;
+    });
+  });*/
+  
