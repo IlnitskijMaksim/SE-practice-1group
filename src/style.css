@@ -211,3 +211,37 @@ header {
   max-width: 100%;
   padding: 5px 10px 0 10px;
 }
+
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.email, .phone {
+  margin: 10px;
+}
+
+.email img, .phone img {
+  display: block;
+  margin: 0 auto;
+}
+
+.email a, .phone a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.email a:hover, .phone a:hover {
+  color: #fff;
+}
+
+.m-0 {
+  margin-top: 10px;
+}
