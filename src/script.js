@@ -53,7 +53,7 @@ $(".single-item").slick({
       //document.getElementById("form").submit();
     }
   });
-  function printCertificate(){
+  function printCertificate() {
       const printContents = document.querySelector(".selected-image").outerHTML;
       let originalContents = document.body.innerHTML;
 
