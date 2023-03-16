@@ -13,11 +13,13 @@ $(".single-item").slick({
       if (event.target.tagName === 'IMG') {
           const src = event.target.dataset.src;
           selectedImage.innerHTML = `<img src="${src}" />`;
+          document.getElementById("template").className=event.target.dataset.class;
       }
   });
 
 
   function validateForm() {
+    const date = new Date().toLocaleDateString('en-GB');
     const title = document.getElementById("title").value.trim();
     const duration = document.getElementById("duration").value.trim();
     const surnameTeacher = document.getElementById("surname-teacher").value.trim();
@@ -34,14 +36,22 @@ $(".single-item").slick({
       return false;
     }
 
-    return true;
+    return {surnameStudent, title, surnameTeacher, date, duration};
   }
 
   const createButton = document.getElementById("create");
   createButton.addEventListener("click", function (event) {
     event.preventDefault();
-    if (validateForm()) {
-      document.getElementById("form").submit();
+    const data = validateForm();
+    console.log(data)
+    if (data) {
+      document.getElementsByClassName("student-temp")[0].innerText=data.surnameStudent;
+      document.getElementsByClassName("title-temp")[0].innerText=data.title;
+      document.getElementsByClassName("teacher-temp")[0].innerText=data.surnameTeacher;
+      document.getElementsByClassName("date-temp")[0].innerText = data.date;
+      document.getElementsByClassName("duration-temp")[0].innerText=data.duration;
+      
+      //document.getElementById("form").submit();
     }
   });
 

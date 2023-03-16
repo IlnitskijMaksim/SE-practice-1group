@@ -34,16 +34,16 @@
               <div id="error-message"></div>
               <h2 class="card-title text-white">Введіть свої дані</h2>
               <div class="form-group row">
-                <label for="title" class="col-form-label">Назва заходу:</label>
+                <label for="title" class="col-form-label">Назва заходу(участь у):</label>
                 <input type="text" id="title" class="form-control" />
 
-                <label for="duration" class="col-form-label">Тривалість:</label>
+                <label for="duration" class="col-form-label">Тривалість(години):</label>
                 <input type="number" min="1" id="duration" class="form-control" />
 
                 <label for="surname-teacher" class="col-form-label">Прізвище та ініцали викладача:</label>
                 <input type="text" id="surname-teacher" class="form-control" />
 
-                <label for="surname-student" class="col-form-label">Прізвище та ініціали учня:</label>
+                <label for="surname-student" class="col-form-label">Прізвище та ініціали учня(кому):</label>
                 <input type="text" id="surname-student" class="form-control" />
               </div>
               <div class="card-footer">
@@ -58,32 +58,32 @@
             <div class="slider single-item">
               <div>
                 <div class="image">
-                  <img src="img/template1.png" data-src="img/template1.png"/>
+                  <img src="img/template1.png" data-src="img/template1.png" data-class="template1"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template2.png" data-src="img/template2.png"/>
+                  <img src="img/template2.png" data-src="img/template2.png" data-class="template2"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template3.png" data-src="img/template3.png"/>
+                  <img src="img/template3.png" data-src="img/template3.png" data-class="template3"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template4.png" data-src="img/template4.png"/>
+                  <img src="img/template4.png" data-src="img/template4.png" data-class="template4"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template5.png" data-src="img/template5.png"/>
+                  <img src="img/template5.png" data-src="img/template5.png" data-class="template5"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template6.png" data-src="img/template6.png"/>
+                  <img src="img/template6.png" data-src="img/template6.png" data-class="template6"/>
                 </div>
               </div>
             </div>
@@ -93,7 +93,14 @@
     </div>
     <div id="container-preview">
       <h2 class="card-title text-white">Готовий сертифікат</h2>
-      <div class="selected-image"></div>
+      <div id="template" class="">
+        <div class="selected-image"></div>
+        <div class="student-temp"></div>
+        <div class="title-temp"></div>
+        <div class="teacher-temp"></div>
+        <div class="date-temp"></div>
+        <div class="duration-temp"></div>
+      </div>
       <div class="button-container">
         <button id="print" class="button">Друкувати</button>
         <button id="export" class="button">Експорт в PDF</button>
