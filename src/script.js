@@ -50,12 +50,12 @@ createButton.addEventListener("click", function (event) {
     document.getElementsByClassName("date-temp")[0].innerText = data.date;
     document.getElementsByClassName("duration-temp")[0].innerText = data.duration;
 
-    //document.getElementById("form").submit();
-  }
-});
-function printCertificate(){
-    const printContents = document.getElementById("template").outerHTML;
-    let originalContents = document.body.innerHTML;
+      //document.getElementById("form").submit();
+    }
+  });
+  function printCertificate(){
+      const printContents = document.querySelector(".selected-image").outerHTML;
+      let originalContents = document.body.innerHTML;
 
     document.body.innerHTML = printContents;
 
