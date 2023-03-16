@@ -52,7 +52,7 @@ createButton.addEventListener("click", function (event) {
     }
   });
   function printCertificate(){
-      const printContents = document.querySelector(".selected-image").outerHTML;
+      const printContents = document.getElementById("template").outerHTML;
       let originalContents = document.body.innerHTML;
 
     document.body.innerHTML = printContents;
