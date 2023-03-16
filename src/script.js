@@ -49,8 +49,6 @@ createButton.addEventListener("click", function (event) {
     document.getElementsByClassName("teacher-temp")[0].innerText = data.surnameTeacher;
     document.getElementsByClassName("date-temp")[0].innerText = data.date;
     document.getElementsByClassName("duration-temp")[0].innerText = data.duration;
-
-      //document.getElementById("form").submit();
     }
   });
   function printCertificate(){
