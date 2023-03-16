@@ -13,10 +13,9 @@ $(".single-item").slick({
       if (event.target.tagName === 'IMG') {
           const src = event.target.dataset.src;
           selectedImage.innerHTML = `<img src="${src}" />`;
-          document.getElementById("template").className=event.target.dataset.class;
+          document.getElementById("template").className = event.target.dataset.class;
       }
   });
-
 
   function validateForm() {
     const date = new Date().toLocaleDateString('en-GB');
@@ -45,31 +44,22 @@ $(".single-item").slick({
     const data = validateForm();
     console.log(data)
     if (data) {
-      document.getElementsByClassName("student-temp")[0].innerText=data.surnameStudent;
-      document.getElementsByClassName("title-temp")[0].innerText=data.title;
-      document.getElementsByClassName("teacher-temp")[0].innerText=data.surnameTeacher;
+      document.getElementsByClassName("student-temp")[0].innerText = data.surnameStudent;
+      document.getElementsByClassName("title-temp")[0].innerText = data.title;
+      document.getElementsByClassName("teacher-temp")[0].innerText = data.surnameTeacher;
       document.getElementsByClassName("date-temp")[0].innerText = data.date;
-      document.getElementsByClassName("duration-temp")[0].innerText=data.duration;
-      
+      document.getElementsByClassName("duration-temp")[0].innerText = data.duration;
+
       //document.getElementById("form").submit();
     }
   });
+  function printCertificate(){
+      const printContents = document.querySelector(".selected-image").outerHTML;
+      let originalContents = document.body.innerHTML;
 
- /* Print
-  $(document).ready(function () {
-    // rest of the code
-  
-    $("#print").click(function () {
-      // modify this line to only print the selected-image div
-      var printContents = $(".selected-image").html(); 
-  
-      var originalContents = document.body.innerHTML;
-  
       document.body.innerHTML = printContents;
-  
+
       window.print();
-  
+
       document.body.innerHTML = originalContents;
-    });
-  });*/
-  
+  }
