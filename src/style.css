@@ -193,11 +193,11 @@ header {
   font-size: 2vw;
 }
 
-#template .teacher-temp, .title-temp, .duration-temp {
+#template .teacher-temp, .title-temp{
   font-size: 1.5vw
 }
 
-#template  .date-temp{
+#template  .date-temp,  .duration-temp {
   font-size: 1vw;
 }
 
