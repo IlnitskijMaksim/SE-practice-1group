@@ -193,11 +193,11 @@ header {
   font-size: 2vw;
 }
 
-#template .teacher-temp, .title-temp {
+#template .teacher-temp, .title-temp, .duration-temp {
   font-size: 1.5vw
 }
 
-#template  .date-temp, .duration-temp{
+#template  .date-temp{
   font-size: 1vw;
 }
 
@@ -209,7 +209,7 @@ header {
 
 .template1 .title-temp{
   position: absolute;
-  left: 40%;
+  left: 39%;
   bottom: 41%;
 }
 
@@ -239,7 +239,7 @@ header {
 
 .template2 .title-temp{
   position: absolute;
-  left: 31%;
+  left: 28%;
   bottom: 41%;
 }
 
@@ -269,7 +269,7 @@ header {
 
 .template3 .title-temp{
   position: absolute;
-  left: 28%;
+  left: 26%;
   bottom: 41%;
 }
 
@@ -299,7 +299,7 @@ header {
 
 .template4 .title-temp{
   position: absolute;
-  left: 45%;
+  left: 44%;
   bottom: 41%;
 }
 
@@ -359,7 +359,7 @@ header {
 
 .template6 .title-temp{
   position: absolute;
-  left: 34%;
+  left: 33%;
   bottom: 41%;
 }
 
