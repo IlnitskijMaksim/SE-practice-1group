@@ -6,65 +6,74 @@ $(".single-item").slick({
     slidesToScroll: 1,
 });
 
-const slider = document.querySelector('.slider');
-const selectedImage = document.querySelector('.selected-image');
-const containerPreview = document.getElementById("container-preview");
+class Course {
+    constructor() {
+        this.title = document.getElementById('title').value.trim();
+        this.duration = document.getElementById('duration').value.trim();
+    }
+}
 
-slider.addEventListener('click', (event) => {
+class Teacher {
+    constructor() {
+        this.name = document.getElementById('surname-teacher').value.trim();
+    }
+}
+
+class Participant {
+    constructor() {
+        this.name = document.getElementById('surname-student').value.trim();
+    }
+}
+
+class Certificate {
+    constructor() {
+        this.dateOfIssue = new Date().toLocaleDateString('en-GB');
+    }
+}
+
+function chooseTemplate(event) {
+    const selectedImage = document.querySelector('.selected-image');
+    const containerPreview = document.getElementById("container-preview");
+
     if (event.target.tagName === 'IMG') {
         const src = event.target.dataset.src;
         selectedImage.innerHTML = `<img src="${src}" />`;
         document.getElementById("template").className = event.target.dataset.class;
         containerPreview.classList.add("visible");
     }
-});
+}
 
-function validateForm() {
-    const date = new Date().toLocaleDateString('en-GB');
-    const title = document.getElementById("title").value.trim();
-    const duration = document.getElementById("duration").value.trim();
-    const surnameTeacher = document.getElementById("surname-teacher").value.trim();
-    const surnameStudent = document.getElementById("surname-student").value.trim();
+function generateCertificate() {
+    const course = new Course();
+    const teacher = new Teacher();
+    const participant = new Participant();
+    const certificate = new Certificate();
 
-    if (title === "" || duration === "" || surnameTeacher === "" || surnameStudent === "") {
+    if (course.title === "" || course.duration === "" || teacher.name === "" || participant.name === "") {
         alert("Будь ласка, заповніть всі поля");
-        return false;
+        return;
     }
 
     const regex = /^[a-zA-Zа-яА-ЯІіЇїЄєҐґ'.\s,;-]+$/;
-    if (!regex.test(surnameTeacher) || !regex.test(surnameStudent)) {
+    if (!regex.test(teacher.name) || !regex.test(participant.name)) {
         alert("Поля вводу прізвища та ініціалів можуть містити лише літери, пробіли, апостроф і деякі розділові знаки");
-        return false;
+        return;
     }
 
-    if (duration <= 0) {
+    if (course.duration <= 0) {
         alert("Тривалість курсу має бути додатнім числом");
-        return false;
+        return;
     }
 
-    return {surnameStudent, title, surnameTeacher, date, duration};
+    document.getElementsByClassName("student-temp")[0].innerText = participant.surnameStudent;
+    document.getElementsByClassName("title-temp")[0].innerText = course.title;
+    document.getElementsByClassName("teacher-temp")[0].innerText = teacher.surnameTeacher;
+    document.getElementsByClassName("date-temp")[0].innerText = certificate.dateOfIssue;
+    document.getElementsByClassName("duration-temp")[0].innerText = course.duration;
 }
 
-const createButton = document.getElementById("create");
-createButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    const data = validateForm();
-    // console.log(data)
-
-    if (data) {
-        document.getElementsByClassName("student-temp")[0].innerText = data.surnameStudent;
-        document.getElementsByClassName("title-temp")[0].innerText = data.title;
-        document.getElementsByClassName("teacher-temp")[0].innerText = data.surnameTeacher;
-        document.getElementsByClassName("date-temp")[0].innerText = data.date;
-        document.getElementsByClassName("duration-temp")[0].innerText = data.duration;
-    }
-});
-
-function printCertificate() {
-    containerPreview.classList.add("print-content");
-
+function downloadOrPrintCertificate() {
+    document.getElementById("container-preview").classList.add("print-content");
     window.print();
-
-    containerPreview.classList.remove("print-content");
+    document.getElementById("container-preview").classList.remove("print-content");
 }
-
