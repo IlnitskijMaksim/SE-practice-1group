@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style type="text/css" media="print">
+      @page { size: landscape; }
+    </style>
   </head>
   <body>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -33,20 +38,20 @@
               <div id="error-message"></div>
               <h2 class="card-title text-white">Введіть свої дані</h2>
               <div class="form-group row">
-                <label for="title" class="col-form-label">Назва заходу(участь в):</label>
+                <label for="title" class="col-form-label">Назва заходу (участь в):</label>
                 <input type="text" id="title" class="form-control" />
 
-                <label for="duration" class="col-form-label">Тривалість(години):</label>
+                <label for="duration" class="col-form-label">Тривалість (години):</label>
                 <input type="number" min="1" id="duration" class="form-control" />
 
                 <label for="surname-teacher" class="col-form-label">Прізвище та ініцали викладача:</label>
                 <input type="text" id="surname-teacher" class="form-control" />
 
-                <label for="surname-student" class="col-form-label">Прізвище та ініціали учня(кому):</label>
+                <label for="surname-student" class="col-form-label">Прізвище та ініціали учня (кому):</label>
                 <input type="text" id="surname-student" class="form-control" />
               </div>
               <div class="card-footer">
-                <button id="create" class="btn btn-block">Додати</button>
+                <button id="create" class="btn btn-block" onclick="generateCertificate()">Додати</button>
               </div>
             </div>
           </div>
@@ -54,7 +59,7 @@
         <div class="col-md-6 mb-6">
           <h2 class="card-title text-white">Оберіть шаблон</h2>
           <div class="content">
-            <div class="slider single-item">
+            <div class="slider single-item" onclick="chooseTemplate(event)">
               <div>
                 <div class="image">
                   <img src="img/template1.png" data-src="img/template1.png" data-class="template1"/>
@@ -101,8 +106,8 @@
         <div class="duration-temp"></div>
       </div>
       <div class="button-container">
-        <button id="print" class="button">Друкувати</button>
-        <button id="export" class="button">Експорт в PDF</button>
+        <button id="print" class="button" onclick="printCertificate()">Друкувати</button>
+        <button id="export" class="button" onclick="downloadCertificate()">Експорт в PDF</button>
       </div>
     </div>
     <footer class="py-5 bg-dark">
