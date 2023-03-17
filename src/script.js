@@ -67,3 +67,4 @@ function printCertificate() {
 
     containerPreview.classList.remove("print-content");
 }
+
