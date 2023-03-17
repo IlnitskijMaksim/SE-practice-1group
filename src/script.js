@@ -73,6 +73,15 @@ function generateCertificate() {
 }
 
 function printCertificate() {
+    const course = new Course();
+    const teacher = new Teacher();
+    const participant = new Participant();
+
+    if (course.title === "" || course.duration === "" || teacher.name === "" || participant.name === "") {
+        alert("Будь ласка, спочатку заповніть всі поля форми");
+        return;
+    }
+
     document.getElementById("container-preview").classList.add("print-content");
     window.print();
     document.getElementById("container-preview").classList.remove("print-content");
