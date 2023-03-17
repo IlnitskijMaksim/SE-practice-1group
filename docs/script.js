@@ -87,18 +87,17 @@ function printCertificate() {
     document.getElementById("container-preview").classList.remove("print-content");
 }
 
-function downloadCertificate() {
+function downloadAndPrintCertificate() {
     window.jsPDF = window.jspdf.jsPDF;
     const participant = new Participant();
+    const button = document.querySelector(".button-container");
+    button.remove();
 
     let docPDF = new jsPDF({
         orientation: 'landscape',
     });
 
     let elementHTML = document.querySelector("#template");
-
-    elementHTML.classList.add("certificate");
-
     docPDF.html(elementHTML, {
         callback: function(docPDF) {
             docPDF.save(participant.name);

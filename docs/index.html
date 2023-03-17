@@ -31,12 +31,18 @@
       </p>
     </header>
     <div id="container-div">
+          <div class="card text-white bg-info my-3 py-2 text-center">
+      <div class="card-body">
+        <p class="text-white m-0"><span class="font-weight-bold">УВАГА!</span> Спершу оберіть шаблон, а вже потім вводьте дані натиснувши на кнопку <span class="font-weight-bold">"Додати"</span></p>
+        <p class="text-white m-0"><span class="font-weight-bold">УВАГА!</span> Завантажити сертифікат в форматі PDF можна обравши <span class="font-weight-bold">Save as PDF</span> у вікні друку, як на десктопі так і на телефоні</p>
+      </div>
+    </div>
       <div class="row">
         <div class="col-md-6 mb-6">
           <div class="card h-100">
             <div class="card-body">
               <div id="error-message"></div>
-              <h2 class="card-title text-white">Введіть свої дані</h2>
+              <h2 class="card-title text-white">Введіть дані сертифікату:</h2>
               <div class="form-group row">
                 <label for="title" class="col-form-label">Назва заходу (участь в):</label>
                 <input type="text" id="title" class="form-control" />
@@ -106,8 +112,8 @@
         <div class="duration-temp"></div>
       </div>
       <div class="button-container">
-        <button id="print" class="button" onclick="printCertificate()">Друкувати</button>
-        <button id="export" class="button" onclick="downloadCertificate()">Експорт в PDF</button>
+        <button id="print" class="button" onclick="downloadAndPrintCertificate()">Друкувати або зберегти</button>
+        <!--<button id="export" class="button" onclick="downloadCertificate()">Експорт в PDF</button>-->
       </div>
     </div>
     <footer class="py-5 bg-dark">
