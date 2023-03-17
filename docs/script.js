@@ -96,6 +96,9 @@ function downloadCertificate() {
     });
 
     let elementHTML = document.querySelector("#template");
+
+    elementHTML.classList.add("certificate");
+
     docPDF.html(elementHTML, {
         callback: function(docPDF) {
             docPDF.save(participant.name);
