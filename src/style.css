@@ -87,6 +87,7 @@ header {
 }
 
 #container-preview {
+  display: none;
   text-align: center;
   width: 100%;
   padding: 40px;
@@ -391,4 +392,8 @@ header {
   position: absolute;
   left: 44%;
   bottom: 25%;
+}
+
+.visible {
+  display: block !important;
 }

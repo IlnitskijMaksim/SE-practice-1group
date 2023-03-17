@@ -8,12 +8,14 @@ $(".single-item").slick({
 
 const slider = document.querySelector('.slider');
 const selectedImage = document.querySelector('.selected-image');
+const containerPreview = document.getElementById("container-preview");
 
 slider.addEventListener('click', (event) => {
     if (event.target.tagName === 'IMG') {
         const src = event.target.dataset.src;
         selectedImage.innerHTML = `<img src="${src}" />`;
         document.getElementById("template").className = event.target.dataset.class;
+        containerPreview.classList.add("visible");
     }
 });
 
@@ -59,11 +61,9 @@ createButton.addEventListener("click", function (event) {
 });
 
 function printCertificate() {
-    const element = document.getElementById("container-preview");
-
-    element.classList.add("print-content");
+    containerPreview.classList.add("print-content");
 
     window.print();
 
-    element.classList.remove("print-content");
+    containerPreview.classList.remove("print-content");
 }
