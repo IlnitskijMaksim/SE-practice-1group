@@ -87,7 +87,7 @@ function printCertificate() {
     document.getElementById("container-preview").classList.remove("print-content");
 }
 
-/*function downloadAndPrintCertificate() {
+function downloadCertificate() {
     window.jsPDF = window.jspdf.jsPDF;
     const participant = new Participant();
 
@@ -106,4 +106,4 @@ function printCertificate() {
         width: 300,
         windowWidth: 700
     });
-}*/
+}
