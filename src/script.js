@@ -102,7 +102,7 @@ function downloadCertificate() {
         },
         x: 0,
         y: 0,
-        width: 170,
-        windowWidth: 650
+        width: 300,
+        windowWidth: 700
     });
 }
