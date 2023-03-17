@@ -54,7 +54,7 @@ function generateCertificate() {
         return;
     }
 
-    const regex = /^[a-zA-Zа-яА-ЯІіЇїЄєҐґ'.\s,;-]+$/;
+    const regex = /^[a-zA-Zа-яА-ЯІіЇїЄєҐґ'.\s,-]+$/;
     if (!regex.test(teacher.name) || !regex.test(participant.name)) {
         alert("Поля вводу прізвища та ініціалів можуть містити лише літери, пробіли, апостроф і деякі розділові знаки");
         return;
@@ -72,8 +72,12 @@ function generateCertificate() {
     document.getElementsByClassName("duration-temp")[0].innerText = course.duration;
 }
 
-function downloadOrPrintCertificate() {
+function printCertificate() {
     document.getElementById("container-preview").classList.add("print-content");
     window.print();
     document.getElementById("container-preview").classList.remove("print-content");
+}
+
+function downloadCertificate(){
+    
 }
