@@ -198,10 +198,10 @@ header {
   top: 0;
 }
 
-/*.print-content .button-container,
+.print-content .button-container,
 .print-content .card-title {
-  display: none;
-}*/
+  display: none !important;
+}
 
 #template .student-temp {
   font-size: 2vw;
