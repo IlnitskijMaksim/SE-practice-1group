@@ -85,8 +85,6 @@ function printCertificate() {
     document.getElementById("container-preview").classList.add("print-content");
     window.print();
     document.getElementById("container-preview").classList.remove("print-content");
-    const button = document.querySelector(".button-container");
-    button.remove();
 }
 
 /*function downloadAndPrintCertificate() {
