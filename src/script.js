@@ -88,5 +88,21 @@ function printCertificate() {
 }
 
 function downloadCertificate() {
+    window.jsPDF = window.jspdf.jsPDF;
+    const participant = new Participant();
 
+    let docPDF = new jsPDF({
+        orientation: 'landscape',
+    });
+
+    let elementHTML = document.querySelector("#template");
+    docPDF.html(elementHTML, {
+        callback: function(docPDF) {
+            docPDF.save(participant.name);
+        },
+        x: 0,
+        y: 0,
+        width: 170,
+        windowWidth: 650
+    });
 }
