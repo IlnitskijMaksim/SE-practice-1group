@@ -65,9 +65,9 @@ function generateCertificate() {
         return;
     }
 
-    document.getElementsByClassName("student-temp")[0].innerText = participant.surnameStudent;
+    document.getElementsByClassName("student-temp")[0].innerText = participant.name;
     document.getElementsByClassName("title-temp")[0].innerText = course.title;
-    document.getElementsByClassName("teacher-temp")[0].innerText = teacher.surnameTeacher;
+    document.getElementsByClassName("teacher-temp")[0].innerText = teacher.name;
     document.getElementsByClassName("date-temp")[0].innerText = certificate.dateOfIssue;
     document.getElementsByClassName("duration-temp")[0].innerText = course.duration;
 }
@@ -78,6 +78,6 @@ function printCertificate() {
     document.getElementById("container-preview").classList.remove("print-content");
 }
 
-function downloadCertificate(){
-    
+function downloadCertificate() {
+
 }
