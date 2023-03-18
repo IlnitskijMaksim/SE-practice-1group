@@ -46,16 +46,23 @@
               <h2 class="card-title text-white">Введіть дані сертифікату:</h2>
               <div class="form-group row">
                 <label for="title" class="col-form-label">Назва заходу (участь в):</label>
-                <input type="text" id="title" class="form-control" />
+                <input type="text" id="title" class="form-control" value="Назва" />
 
                 <label for="duration" class="col-form-label">Тривалість (години):</label>
-                <input type="number" min="1" id="duration" class="form-control" />
+                <input type="number" min="1" id="duration" class="form-control" value="1" />
 
                 <label for="surname-teacher" class="col-form-label">Прізвище та ініцали викладача:</label>
-                <input type="text" id="surname-teacher" class="form-control" />
+                <input type="text" id="surname-teacher" class="form-control" value="Прізвище" />
+
+                <label for="students-count" class="col-form-label">Кількість Учнів:</label>
+                <input type="number" min="1" id="students-count" class="form-control" />
 
                 <label for="surname-student" class="col-form-label">Прізвища та ініціали учнів (кому):</label>
-                <input type="text" id="surname-student" class="form-control" />
+                
+                <input type="text" id="surname-student" class="form-control hidden" value="qweqwe" />
+                <div id="students-list">
+                  
+                </div>
               </div>
               <div class="card-footer">
                 <button id="create" class="btn btn-block" onclick="generateCertificate()">Додати</button>
@@ -102,16 +109,21 @@
         </div>
       </div>
     </div>
-    <div id="container-preview">
-      <link rel="stylesheet" href="style.css" />
-      <h2 class="card-title text-white">Готовий сертифікат</h2>
-      <div id="template" class="" style="font-family: Roboto;">
+    <div id="temp" class="hidden">
+      <div class="template" style="font-family: Roboto;">
         <div class="selected-image"></div>
         <div class="student-temp"></div>
         <div class="title-temp"></div>
         <div class="teacher-temp"></div>
         <div class="date-temp"></div>
         <div class="duration-temp"></div>
+      </div>
+    </div>
+    <div id="container-preview">
+      <link rel="stylesheet" href="style.css" />
+      <h2 class="card-title text-white">Готовий сертифікат</h2>
+      <div id="template">
+        
       </div>
       <div class="button-container">
         <button id="print" class="button" onclick="printCertificate()">Друкувати</button>

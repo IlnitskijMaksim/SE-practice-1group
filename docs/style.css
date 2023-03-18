@@ -183,7 +183,7 @@ header {
   color: #fff;
 }
 
-#template {
+.template {
   color: #000;
   font-family: "Roboto", sans-serif;
   position: relative;
@@ -196,6 +196,10 @@ header {
   right: 0;
   bottom: 0;
   top: 0;
+}
+
+.print-content .template {
+  margin: 10% 0;
 }
 
 .print-content .button-container,
@@ -218,6 +222,27 @@ header {
 #template  .date-temp {
   font-size: 1vw;
 }
+
+#template.print-to-pdf .student-temp {
+  font-size: 12px;
+}
+
+#template.print-to-pdf .teacher-temp{
+  font-size: 10px;
+}
+
+#template.print-to-pdf .title-temp{
+  font-size: 10px;
+}
+
+#template.print-to-pdf .duration-temp{
+  font-size: 9px;
+}
+
+#template.print-to-pdf .date-temp {
+  font-size: 8px;
+}
+
 
 .template1 .student-temp {
   position: absolute;
@@ -401,4 +426,12 @@ header {
 
 .visible {
   display: block !important;
+}
+
+.hidden {
+  display: none;
+}
+
+#students-list {
+  display: contents;
 }
