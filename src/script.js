@@ -47,6 +47,7 @@ function chooseTemplate(event) {
     const containerPreview = document.getElementById("container-preview");
 
     if (event.target.tagName === 'IMG') {
+        const imgPath = 'https://ilnitskijmaksim.github.io/SE-practice-1group/';
         const src = imgPath + event.target.dataset.src;
         selectedImage.innerHTML = `<img src="${src}" />`;
         document.querySelector("#temp .template").className = `${event.target.dataset.class} template`;
