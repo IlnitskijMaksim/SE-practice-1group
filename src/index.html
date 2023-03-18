@@ -40,6 +40,37 @@
       </div>
         <div class="row">
           <div class="col-md-6 mb-6">
+            <div class="card h-100">
+              <div class="card-body">
+                <div id="error-message"></div>
+                <h2 class="card-title text-white">Введіть дані сертифікату:</h2>
+                <div class="form-group row">
+                  <label for="title" class="col-form-label">Назва заходу (участь в):</label>
+                  <input type="text" id="title" class="form-control"/>
+
+                  <label for="duration" class="col-form-label">Тривалість (години):</label>
+                  <input type="number" min="1" id="duration" class="form-control"/>
+
+                  <label for="surname-teacher" class="col-form-label">Прізвище та ініцали викладача:</label>
+                  <input type="text" id="surname-teacher" class="form-control"/>
+
+                  <label for="students-count" class="col-form-label">Введіть кількість студентів для яких буде зроблено сертифікати:</label>
+                  <input type="number" min="1" id="students-count" class="form-control" />
+
+                  <label for="surname-student" class="col-form-label">Введіть прізвища та ініціали для кожного учня (кому):</label>
+                  
+                  <input type="text" id="surname-student" class="form-control hidden"/>
+                  <div id="students-list">
+                    
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <button id="create" class="btn btn-block" onclick="generateCertificate()">Додати</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-6">
             <h2 class="card-title text-white">Оберіть шаблон</h2>
             <div class="content">
               <div class="slider single-item" onclick="chooseTemplate(event)">
@@ -72,37 +103,6 @@
                   <div class="image">
                     <img src="img/template6.png" data-src="img/template6.png" data-class="template6"/>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 mb-6">
-            <div class="card h-100">
-              <div class="card-body">
-                <div id="error-message"></div>
-                <h2 class="card-title text-white">Введіть дані сертифікату:</h2>
-                <div class="form-group row">
-                  <label for="title" class="col-form-label">Назва заходу (участь в):</label>
-                  <input type="text" id="title" class="form-control"/>
-
-                  <label for="duration" class="col-form-label">Тривалість (години):</label>
-                  <input type="number" min="1" id="duration" class="form-control"/>
-
-                  <label for="surname-teacher" class="col-form-label">Прізвище та ініцали викладача:</label>
-                  <input type="text" id="surname-teacher" class="form-control"/>
-
-                  <label for="students-count" class="col-form-label">Введіть кількість студентів для яких буде зроблено сертифікати:</label>
-                  <input type="number" min="1" id="students-count" class="form-control" />
-
-                  <label for="surname-student" class="col-form-label">Введіть прізвища та ініціали для кожного учня (кому):</label>
-                  
-                  <input type="text" id="surname-student" class="form-control hidden"/>
-                  <div id="students-list">
-                    
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <button id="create" class="btn btn-block" onclick="generateCertificate()">Додати</button>
                 </div>
               </div>
             </div>
