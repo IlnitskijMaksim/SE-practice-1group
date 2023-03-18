@@ -1,3 +1,4 @@
+
 $(".single-item").slick({
     dots: true,
     infinite: true,
@@ -95,6 +96,10 @@ function downloadCertificate() {
     let docPDF = new jsPDF({
         orientation: 'landscape',
     });
+
+    docPDF.addFileToVFS("Roboto.ttf", Roboto);
+    docPDF.addFont("Roboto.ttf", "Roboto", "normal");
+    docPDF.setFont("Roboto");
 
     let elementHTML = document.querySelector("#template");
     docPDF.html(elementHTML, {

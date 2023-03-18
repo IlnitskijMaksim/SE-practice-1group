@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
@@ -20,6 +20,7 @@
     <style type="text/css" media="print">
       @page { size: landscape; }
     </style>
+    <script src="roboto.js"></script>
   </head>
   <body>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -102,8 +103,9 @@
       </div>
     </div>
     <div id="container-preview">
+      <link rel="stylesheet" href="style.css" />
       <h2 class="card-title text-white">Готовий сертифікат</h2>
-      <div id="template" class="">
+      <div id="template" class="" style="font-family: Roboto;">
         <div class="selected-image"></div>
         <div class="student-temp"></div>
         <div class="title-temp"></div>
