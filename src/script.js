@@ -72,10 +72,10 @@ function generateCertificate() {
     }
 
     const regex = /^[a-zA-Zа-яА-ЯІіЇїЄєҐґ'.\s,-]+$/;
-    // if (!regex.test(teacher.name) || !regex.test(participant.name)) {
-    //     alert("Поля вводу прізвища та ініціалів можуть містити лише літери, пробіли, апостроф і деякі розділові знаки");
-    //     return;
-    // }
+     if (!regex.test(teacher.name) || !regex.test(participants.name)) {
+         alert("Поля вводу прізвища та ініціалів можуть містити лише літери, пробіли, апостроф і деякі розділові знаки");
+         return;
+     }
 
     if (course.duration <= 0) {
         alert("Тривалість курсу має бути додатнім числом");
@@ -119,10 +119,15 @@ function printCertificate() {
         alert("Будь ласка, спочатку заповніть всі поля форми");
         return;
     }
+    
+    document.getElementById("main").classList.add("hidden");
+    document.getElementById("print-box").classList.remove("hidden");
+    document.getElementById("print-box").innerHTML = document.getElementById("container-preview").innerHTML;
 
-    document.getElementById("container-preview").classList.add("print-content");
     window.print();
-    document.getElementById("container-preview").classList.remove("print-content");
+
+    // document.getElementById("main").classList.remove("hidden");
+    // document.getElementById("print-box").classList.add("hidden");
 }
 
 function downloadCertificate() {
