@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
@@ -20,6 +20,7 @@
     <style type="text/css" media="print">
       @page { size: landscape; }
     </style>
+    <script src="roboto.js"></script>
   </head>
   <body>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
@@ -53,7 +54,7 @@
                 <label for="surname-teacher" class="col-form-label">Прізвище та ініцали викладача:</label>
                 <input type="text" id="surname-teacher" class="form-control" />
 
-                <label for="surname-student" class="col-form-label">Прізвище та ініціали учня (кому):</label>
+                <label for="surname-student" class="col-form-label">Прізвища та ініціали учнів (кому):</label>
                 <input type="text" id="surname-student" class="form-control" />
               </div>
               <div class="card-footer">
@@ -68,32 +69,32 @@
             <div class="slider single-item" onclick="chooseTemplate(event)">
               <div>
                 <div class="image">
-                  <img src="img/template1.png" data-src="img/template1.png" data-class="template1"/>
+                  <img src="img/template1.svg" data-src="img/template1.svg" data-class="template1"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template2.png" data-src="img/template2.png" data-class="template2"/>
+                  <img src="img/template2.svg" data-src="img/template2.svg" data-class="template2"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template3.png" data-src="img/template3.png" data-class="template3"/>
+                  <img src="img/template3.svg" data-src="img/template3.svg" data-class="template3"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template4.png" data-src="img/template4.png" data-class="template4"/>
+                  <img src="img/template4.svg" data-src="img/template4.svg" data-class="template4"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template5.png" data-src="img/template5.png" data-class="template5"/>
+                  <img src="img/template5.svg" data-src="img/template5.svg" data-class="template5"/>
                 </div>
               </div>
               <div>
                 <div class="image">
-                  <img src="img/template6.png" data-src="img/template6.png" data-class="template6"/>
+                  <img src="img/template6.svg" data-src="img/template6.svg" data-class="template6"/>
                 </div>
               </div>
             </div>
@@ -102,8 +103,9 @@
       </div>
     </div>
     <div id="container-preview">
+      <link rel="stylesheet" href="style.css" />
       <h2 class="card-title text-white">Готовий сертифікат</h2>
-      <div id="template" class="">
+      <div id="template" class="" style="font-family: Roboto;">
         <div class="selected-image"></div>
         <div class="student-temp"></div>
         <div class="title-temp"></div>
@@ -112,7 +114,7 @@
         <div class="duration-temp"></div>
       </div>
       <div class="button-container">
-        <button id="print" class="button" onclick="printCertificate()">Друкувати або зберегти</button>
+        <button id="print" class="button" onclick="printCertificate()">Друкувати</button>
         <button id="export" class="button" onclick="downloadCertificate()">Експорт в PDF</button>
       </div>
     </div>
