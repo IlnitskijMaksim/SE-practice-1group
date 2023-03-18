@@ -37,7 +37,9 @@ function chooseTemplate(event) {
     const containerPreview = document.getElementById("container-preview");
 
     if (event.target.tagName === 'IMG') {
-        const src = event.target.dataset.src;
+        // const imgPath = 'https://ilnitskijmaksim.github.io/SE-practice-1group/';
+        const imgPath = '';
+        const src = imgPath + event.target.dataset.src;
         selectedImage.innerHTML = `<img src="${src}" />`;
         document.getElementById("template").className = event.target.dataset.class;
         containerPreview.classList.add("visible");
@@ -90,7 +92,6 @@ function printCertificate() {
 
 function downloadCertificate() {
     window.jsPDF = window.jspdf.jsPDF;
-    const participant = new Participant();
 
 
     let docPDF = new jsPDF({
@@ -104,11 +105,11 @@ function downloadCertificate() {
     let elementHTML = document.querySelector("#template");
     docPDF.html(elementHTML, {
         callback: function(docPDF) {
-            docPDF.save(participant.name);
+            docPDF.save('certificate.pdf');
         },
         x: 0,
         y: 0,
-        width: 300,
-        windowWidth: 700
+        width: 380,
+        windowWidth: window.innerWidth
     });
 }
