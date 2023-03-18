@@ -116,7 +116,7 @@ function printCertificate() {
     const participants = new Participants();
 
     if (course.title === "" || course.duration === "" || teacher.name === "" || participants.names?.length === "") {
-        alert("Будь ласка, спочатку заповніть всі поля форми");
+        alert("Будь ласка, спочатку заповніть всі поля форми і оберіть шаблон");
         return;
     }
     
@@ -128,6 +128,15 @@ function printCertificate() {
 }
 
 function downloadCertificate() {
+
+    const course = new Course();
+    const teacher = new Teacher();
+    const participants = new Participants();
+
+    if (course.title === "" || course.duration === "" || teacher.name === "" || participants.names?.length === "") {
+        alert("Будь ласка, спочатку заповніть всі поля форми і оберіть шаблон");
+        return;
+    }
     window.jsPDF = window.jspdf.jsPDF;
 
 
