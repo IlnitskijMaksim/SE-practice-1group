@@ -47,8 +47,6 @@ function chooseTemplate(event) {
     const containerPreview = document.getElementById("container-preview");
 
     if (event.target.tagName === 'IMG') {
-        const imgPath = 'https://ilnitskijmaksim.github.io/SE-practice-1group/';
-        // const imgPath = '';
         const src = imgPath + event.target.dataset.src;
         selectedImage.innerHTML = `<img src="${src}" />`;
         document.querySelector("#temp .template").className = `${event.target.dataset.class} template`;
@@ -72,7 +70,7 @@ function generateCertificate() {
     }
 
     const regex = /^[a-zA-Zа-яА-ЯІіЇїЄєҐґ'.\s,-]+$/;
-     if (!regex.test(teacher.name) || !regex.test(participants.name)) {
+     if (!regex.test(teacher.name) || !regex.test(participants.names)) {
          alert("Поля вводу прізвища та ініціалів можуть містити лише літери, пробіли, апостроф і деякі розділові знаки");
          return;
      }
@@ -93,6 +91,7 @@ function generateCertificate() {
     document.getElementsByClassName("duration-temp")[0].innerText = course.duration;
 
     showList();
+    alert("Дані записано, оберіть шаблон")
 }
 
 function showList () {
@@ -125,9 +124,6 @@ function printCertificate() {
     document.getElementById("print-box").innerHTML = document.getElementById("container-preview").innerHTML;
 
     window.print();
-
-    // document.getElementById("main").classList.remove("hidden");
-    // document.getElementById("print-box").classList.add("hidden");
 }
 
 function downloadCertificate() {
