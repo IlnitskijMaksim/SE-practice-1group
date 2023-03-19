@@ -421,6 +421,96 @@ header {
   bottom: 25%;
 }
 
+.template7 .student-temp {
+  position: absolute;
+  left: 61%;
+  bottom: 51%;
+}
+
+.template7 .title-temp {
+  position: absolute;
+  left: 62%;
+  bottom: 38%;
+}
+
+.template7 .teacher-temp {
+  position: absolute;
+  left: 59%;
+  bottom: 28.5%;
+}
+
+.template7 .date-temp {
+  position: absolute;
+  left: 51%;
+  bottom: 4%;
+}
+
+.template7 .duration-temp {
+  position: absolute;
+  left: 86%;
+  bottom: 4%;
+}
+
+.template8 .student-temp {
+  position: absolute;
+  left: 31%;
+  bottom: 52%;
+}
+
+.template8 .title-temp {
+  position: absolute;
+  left: 33%;
+  bottom: 44%;
+}
+
+.template8 .teacher-temp {
+  position: absolute;
+  left: 57%;
+  bottom: 44%;
+}
+
+.template8 .date-temp {
+  position: absolute;
+  left: 23%;
+  bottom: 28%;
+}
+
+.template8 .duration-temp {
+  position: absolute;
+  left: 45%;
+  bottom: 28%;
+}
+
+.template9 .student-temp {
+  position: absolute;
+  left: 30%;
+  bottom: 52%;
+}
+
+.template9 .title-temp {
+  position: absolute;
+  left: 26%;
+  bottom: 44%;
+}
+
+.template9 .teacher-temp {
+  position: absolute;
+  left: 56%;
+  bottom: 44%;
+}
+
+.template9 .date-temp {
+  position: absolute;
+  left: 23%;
+  bottom: 28%;
+}
+
+.template9 .duration-temp {
+  position: absolute;
+  left: 48%;
+  bottom: 28%;
+}
+
 .visible {
   display: block !important;
 }
