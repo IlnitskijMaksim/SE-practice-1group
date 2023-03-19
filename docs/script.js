@@ -98,7 +98,7 @@ function generateCertificate() {
     document.getElementsByClassName("duration-temp")[0].innerText = course.duration;
 
     showList();
-    alert("Дані записано, оберіть шаблон")
+    alert("Дані записано, оберіть шаблон, якщо ще цього не зробили")
 }
 
 function showList () {
