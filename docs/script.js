@@ -76,6 +76,12 @@ function generateCertificate() {
          return;
      }
 
+     if (!participants.names.every(name => name)) {
+         alert("Поля з учасниками повинні всі бути заповненні");
+         return;
+     }
+
+
     if (course.duration <= 0) {
         alert("Тривалість курсу має бути додатнім числом");
         return;
@@ -116,15 +122,21 @@ function printCertificate() {
     const participants = new Participants();
 
     if (course.title === "" || course.duration === "" || teacher.name === "" || participants.names?.length === "") {
-        alert("Будь ласка, спочатку заповніть всі поля форми і оберіть шаблон");
+        alert("Будь ласка, спочатку заповніть всі поля форми");
         return;
     }
-    
+
+    document.getElementById("print-box").innerHTML = document.getElementById("container-preview").innerHTML;
     document.getElementById("main").classList.add("hidden");
     document.getElementById("print-box").classList.remove("hidden");
-    document.getElementById("print-box").innerHTML = document.getElementById("container-preview").innerHTML;
+   
+    document.querySelector('#print-box .selected-image img').addEventListener('load', () => {
+        window.print();
 
-    window.print();
+        document.getElementById("main").classList.remove("hidden");
+        document.getElementById("print-box").classList.add("hidden");
+    })
+
 }
 
 function downloadCertificate() {
@@ -134,7 +146,7 @@ function downloadCertificate() {
     const participants = new Participants();
 
     if (course.title === "" || course.duration === "" || teacher.name === "" || participants.names?.length === "") {
-        alert("Будь ласка, спочатку заповніть всі поля форми і оберіть шаблон");
+        alert("Будь ласка, спочатку заповніть всі поля форми");
         return;
     }
     window.jsPDF = window.jspdf.jsPDF;
@@ -170,7 +182,7 @@ $("#students-count").on('change keyup', (event) => {
     $('#students-list').html('');
     const elem = $('#surname-student').clone().removeClass('hidden').addClass('surname-student');
     for(let i = 0; i < event.target.value; i++) {
-        elem.clone().attr('id', `surname-student-${(i+1)}`).appendTo('#students-list')
+        elem.clone().attr('id', `surname-student-${(i+1)}`).appendTo('#students-list');
     }
 })
 
