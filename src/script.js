@@ -22,7 +22,7 @@ class Teacher {
 
 class Participants {
     constructor() {
-        
+
         this.names = [];
         $('#students-list input').each((key, input) => {
             this.names.push(input.value.trim());
@@ -112,8 +112,8 @@ function showList () {
         html.find('.student-temp').text(participant);
         target.append(html.clone());
     });
-    
-   
+
+
 }
 
 function printCertificate() {
@@ -129,7 +129,7 @@ function printCertificate() {
     document.getElementById("print-box").innerHTML = document.getElementById("container-preview").innerHTML;
     document.getElementById("main").classList.add("hidden");
     document.getElementById("print-box").classList.remove("hidden");
-   
+
     document.querySelector('#print-box .selected-image img').addEventListener('load', () => {
         window.print();
 
@@ -180,6 +180,12 @@ function downloadCertificate() {
 
 $("#students-count").on('change keyup', (event) => {
     $('#students-list').html('');
+
+    let el = document.querySelector(".col-form-label.hidden");
+    if (el?.classList) {
+        el.classList.remove("hidden");
+    }
+
     const elem = $('#surname-student').clone().removeClass('hidden').addClass('surname-student');
     for(let i = 0; i < event.target.value; i++) {
         elem.clone().attr('id', `surname-student-${(i+1)}`).appendTo('#students-list');
