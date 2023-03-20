@@ -76,16 +76,17 @@ function generateCertificate() {
          return;
      }
 
+     const regexNum = /^[a-zA-Zа-яА-Я0-9\s]+$/;
+     if (!regexNum.test(course.duration)) {
+         alert("В тривалість вводьте тільки число та букви. Наприклад: 1 год");
+         return;
+     }
+
      if (!participants.names.every(name => name)) {
          alert("Поля з учасниками повинні всі бути заповненні");
          return;
      }
 
-
-    if (course.duration <= 0) {
-        alert("Тривалість курсу має бути додатнім числом");
-        return;
-    }
 
     if (studentCount.count < 1) {
         alert("Мінімальна кількість студентів повинна бути 1");
