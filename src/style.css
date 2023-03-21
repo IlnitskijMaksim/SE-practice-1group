@@ -522,3 +522,20 @@ header {
 #students-list {
   display: contents;
 }
+
+.information {
+  height: 100%;
+  margin-top: 20px;
+  float: right;
+  margin-left: 45px;
+  background-color: #436C89;
+  border-radius: 5px;
+  color: #FFF;
+  text-align: center;
+  padding: 10px;
+}
+
+.information:hover{
+  color: #FFF;
+  text-decoration: none;
+}
