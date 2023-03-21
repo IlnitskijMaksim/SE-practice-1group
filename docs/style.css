@@ -20,7 +20,7 @@ header {
 }
 
 .about-site {
-  padding: 30px 40px 0 40px;
+  padding: 30px 0 0 10px;
   text-align: left;
   font-weight: 500;
   color: #fff;
@@ -524,8 +524,7 @@ header {
 }
 
 .information {
-  height: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
   float: right;
   margin-left: 45px;
   background-color: #436C89;
