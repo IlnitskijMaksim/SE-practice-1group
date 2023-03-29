@@ -225,19 +225,19 @@ header {
 }
 
 #template.print-to-pdf .teacher-temp{
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #template.print-to-pdf .title-temp{
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #template.print-to-pdf .duration-temp{
-  font-size: 9px;
+  font-size: 12px;
 }
 
 #template.print-to-pdf .date-temp {
-  font-size: 8px;
+  font-size: 12px;
 }
 
 
@@ -409,6 +409,46 @@ header {
   position: absolute;
   left: 75%;
   bottom: 18%;
+}
+
+.template6 .student-temp {
+  position: absolute;
+  left: 21%;
+  bottom: 54%;
+  right: 68%;
+  text-align: center;
+}
+
+.template6 .title-temp {
+  position: absolute;
+  left: 1%;
+  bottom: 36%;
+  right: 48%;
+  text-align: center;
+}
+
+.template6 .teacher-temp {
+  position: absolute;
+  left: -6%;
+  bottom: 25.5%;
+  right: 22%;
+  text-align: center;
+}
+
+.template6 .date-temp {
+  position: absolute;
+  left: 14%;
+  bottom: 9%;
+  right: 88%;
+  text-align: center;
+}
+
+.template6 .duration-temp {
+  position: absolute;
+  left: 44%;
+  bottom: 9%;
+  right: 43%;
+  text-align: center;
 }
 
 .template7 .student-temp {
