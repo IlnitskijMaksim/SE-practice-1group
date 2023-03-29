@@ -19,6 +19,6 @@
 
 *Календарний план* і статус проекту переглядаємо з використанням [Projects](https://github.com/IlnitskijMaksim/SE-practice-1group/projects). Завдання, відображені у плані беруться з [Issues](https://github.com/IlnitskijMaksim/SE-practice-1group/issues). 
 
-В репозиторії наявні [релізи](https://github.com/IlnitskijMaksim/SE-practice-1group/releases) (для публікації для кінцевих користувачів нових **збірок проекту**), [дискусії](https://github.com/IlnitskijMaksim/SE-practice-1group/discussions) (для **обговорення робочих питань** та **фіксації відповідей** на ці питання та вдалих проектних рішень) та [вікі](https://github.com/IlnitskijMaksim/SE-practice-1group/wiki) (для формування **бази знань** та створення **довідкової системи** для продуктк)!
+В репозиторії наявні [релізи](https://github.com/IlnitskijMaksim/SE-practice-1group/releases) (для публікації для кінцевих користувачів нових **збірок проекту**), [дискусії](https://github.com/IlnitskijMaksim/SE-practice-1group/discussions) (для **обговорення робочих питань** та **фіксації відповідей** на ці питання та вдалих проектних рішень) та [вікі](https://github.com/IlnitskijMaksim/SE-practice-1group/wiki) (для формування **бази знань** та створення **довідкової системи** для продуктy)!
 
 
