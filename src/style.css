@@ -205,19 +205,19 @@ header {
 }
 
 #template .student-temp {
-  font-size: 1.5vw;
+  font-size: 2.5vw;
 }
 
 #template .teacher-temp, .title-temp {
-  font-size: 1.3vw
+  font-size: 2.3vw
 }
 
 #template .duration-temp{
-  font-size: 1.1vw;
+  font-size: 2.1vw;
 }
 
 #template  .date-temp {
-  font-size: 1vw;
+  font-size: 2vw;
 }
 
 #template.print-to-pdf .student-temp {
@@ -413,9 +413,9 @@ header {
 
 .template6 .student-temp {
   position: absolute;
-  left: 21%;
+  left: 1%;
   bottom: 54%;
-  right: 68%;
+  right: 46%;
   text-align: center;
 }
 
@@ -430,16 +430,16 @@ header {
 .template6 .teacher-temp {
   position: absolute;
   left: -6%;
-  bottom: 25.5%;
+  bottom: 24.5%;
   right: 22%;
   text-align: center;
 }
 
 .template6 .date-temp {
   position: absolute;
-  left: 14%;
+  left: 12%;
   bottom: 9%;
-  right: 88%;
+  right: 86%;
   text-align: center;
 }
 
